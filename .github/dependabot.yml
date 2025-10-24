@@ -1,0 +1,23 @@
+# WORKAROUND CONFIG: Using exclude-paths to prevent updating subdirectory requirements.txt
+# This demonstrates using exclude-paths as a workaround for issue #11360
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: /
+    schedule:
+      interval: weekly
+    versioning-strategy: increase-if-necessary
+    # Exclude subdirectory requirements.txt files
+    exclude-paths:
+      - "docs/"
+      - "tests/"
+    groups:
+      python-dependencies:
+        patterns: ['*']
+    labels: [python, dependencies]
+    commit-message:
+      prefix: python-deps
+      include: scope
+
+# Note: This requires the experimental flag 'enable_exclude_paths_subdirectory_manifest_files'
+# to be enabled for exclude-paths to work on manifest files
