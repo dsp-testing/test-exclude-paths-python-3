@@ -1,0 +1,26 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "test-exclude-paths"
+version = "0.1.0"
+description = "Test repository to reproduce Dependabot exclude-paths issue"
+authors = ["Test Author <test@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+# These dependencies should be updated by Dependabot when directory: / is specified
+requests = "2.28.0"
+click = "8.0.0"
+pyyaml = "6.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "7.0.0"
+black = "22.0.0"
+flake8 = "4.0.0"
+
+[tool.poetry.group.docs.dependencies]
+sphinx = "4.5.0"
+sphinx-rtd-theme = "1.0.0"
