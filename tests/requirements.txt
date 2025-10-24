@@ -1,0 +1,12 @@
+# Test requirements - should NOT be updated when directory: / is specified
+# These are pinned to specific versions for test reproducibility
+pytest==6.2.0
+pytest-cov==2.12.0
+pytest-mock==3.6.0
+coverage==5.5
+factory-boy==3.2.0
+
+# Test-specific dependencies that must remain at these versions
+responses==0.13.0
+freezegun==1.1.0
+mock==4.0.3
