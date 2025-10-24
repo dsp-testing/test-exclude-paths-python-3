@@ -1,0 +1,11 @@
+# Documentation requirements - should NOT be updated when directory: / is specified
+# These are older versions that should remain unchanged for docs compatibility
+sphinx==4.0.0
+sphinx-rtd-theme==0.5.0
+docutils==0.16
+jinja2==3.0.0
+markupsafe==2.0.0
+
+# Additional docs-specific dependencies
+recommonmark==0.7.0
+sphinx-markdown-tables==0.0.15
